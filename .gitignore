@@ -1,11 +1,21 @@
-.gadget/
+# --------------------------
+# Dependencies
 node_modules/
 **/.DS_Store
-.react-router/
 
-# Shopify
+# Build artifacts
+dist/
+.react-router/
 extensions/**/dist
 extensions/**/node_modules
 extensions/**/generated
+
+# Shopify config (keep local only)
 shopify.app.*.toml
-.env.*node_modules/
+.env.*
+
+# --------------------------
+# DO NOT IGNORE .gadget/
+# This folder is required for builds
+# --------------------------
+
