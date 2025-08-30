@@ -4,4 +4,12 @@ import react from "@vitejs/plugin-react-swc";
 
 export default defineConfig({
   plugins: [gadget(), react()],
+  optimizeDeps: {
+    exclude: ["gadget-server"],
+  },
+  build: {
+    rollupOptions: {
+      external: ["gadget-server"],
+    },
+  },
 });
