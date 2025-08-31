@@ -8,8 +8,10 @@ export default defineConfig({
     exclude: ["gadget-server"],
   },
   build: {
+    outDir: "dist", // ✅ explicitly set the output folder
     rollupOptions: {
       external: ["gadget-server"],
     },
   },
 });
+
