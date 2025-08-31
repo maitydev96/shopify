@@ -8,10 +8,15 @@ export default defineConfig({
     exclude: ["gadget-server"],
   },
   build: {
-    outDir: "dist", // ✅ explicitly set the output folder
+    outDir: "dist", // explicitly set the output folder for deployment
+    target: "esnext", // ensures modern JS output
+    minify: "esbuild", // use esbuild for faster minification
     rollupOptions: {
       external: ["gadget-server"],
     },
   },
 });
+
+
+
 
