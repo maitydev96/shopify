@@ -10,6 +10,7 @@ export default defineConfig({
     }),
     react(),
   ],
+
   optimizeDeps: {
     exclude: ["gadget-server"],
   },
