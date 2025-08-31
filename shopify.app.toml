@@ -1,4 +1,5 @@
-# Learn more about working with Shopify TOML files with Gadget at https://docs.gadget.dev/guides/plugins/shopify/advanced-topics/shopify-app-toml
+# Learn more about working with Shopify TOML files with Gadget at:
+# https://docs.gadget.dev/guides/plugins/shopify/advanced-topics/shopify-app-toml
 
 client_id = "38ac4edad2f9a1d002b465a66af6603c"
 name = "promobanner"
@@ -6,15 +7,18 @@ application_url = "https://promobanner.gadget.app/api/shopify/install-or-render"
 embedded = true
 
 [build]
-# Gadget manages all your scopes, webhooks and api versioning for your app
-# As such, this line should not be changed unless you are working with
-# Shopify managed installations. Read more at https://docs.gadget.dev/guides/plugins/shopify/advanced-topics/shopify-app-toml
+# Gadget manages all your scopes, webhooks, and API versioning for your app.
+# Do not change this unless you are working with Shopify-managed installations.
 include_config_on_deploy = false
 
 [auth]
-redirect_urls = ["https://promobanner.gadget.app/api/connections/auth/shopify/callback"]
+redirect_urls = [
+  "https://promobanner.gadget.app/api/connections/auth/shopify/callback"
+]
 
 [webhooks]
 api_version = "2025-07"
-
-
+# Example webhook format:
+# [[webhooks]]
+# topic = "APP_UNINSTALLED"
+# path = "/webhooks/app-uninstalled"
