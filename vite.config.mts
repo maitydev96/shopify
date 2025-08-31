@@ -5,7 +5,11 @@ import react from "@vitejs/plugin-react-swc";
 export default defineConfig({
   plugins: [
     gadget({
-      outDir: "dist", // force Gadget plugin to write to root dist
+      viteOptions: {
+        build: {
+          outDir: "dist", // force Vite output to 'dist'
+        },
+      },
     }),
     react(),
   ],
@@ -13,14 +17,15 @@ export default defineConfig({
     exclude: ["gadget-server"],
   },
   build: {
-    outDir: "dist",   // Vite output goes to root dist folder
+    outDir: "dist", // ensure Vite also knows about 'dist'
     target: "esnext",
     minify: "esbuild",
     rollupOptions: {
-      external: ["gadget-server"], // exclude server code
+      external: ["gadget-server"],
     },
   },
 });
+
 
 
 
