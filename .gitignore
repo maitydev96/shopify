@@ -1,58 +1,21 @@
+
 # --------------------------
 # Dependencies
-# --------------------------
 node_modules/
 **/.DS_Store
 
-# --------------------------
 # Build artifacts
-# --------------------------
 dist/
 .react-router/
-extensions/**/dist
-extensions/**/node_modules
-extensions/**/generated
+extensions//dist
+extensions//node_modules
+extensions//generated
 
-# --------------------------
-# Shopify config (local only)
-# --------------------------
+# Shopify config (keep local only)
 shopify.app.*.toml
 .env.*
 
 # --------------------------
-# Windows / OS files
-# --------------------------
-Thumbs.db
-AppData/
-Contacts/
-Downloads/
-Favorites/
-Links/
-Music/
-OneDrive/
-Saved Games/
-Searches/
-Videos/
-ntuser.dat*
-ntuser.ini
-
-# --------------------------
-# Editor / IDE settings
-# --------------------------
-.vscode/
-.eclipse/
-.idlerc/
-
-# --------------------------
-# Logs and temporary files
-# --------------------------
-*.log
-*.bak
-*.tmp
-
-# --------------------------
-# Gadget folder
 # DO NOT IGNORE .gadget/
-# Required for builds
+# This folder is required for builds
 # --------------------------
-.gadget/
