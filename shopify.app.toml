@@ -1,3 +1,4 @@
+
 # Learn more about working with Shopify TOML files with Gadget at:
 # https://docs.gadget.dev/guides/plugins/shopify/advanced-topics/shopify-app-toml
 
@@ -18,7 +19,11 @@ redirect_urls = [
 
 [webhooks]
 api_version = "2025-07"
-# Example webhook format:
+
+# Example webhook configuration (uncomment if needed)
 # [[webhooks]]
 # topic = "APP_UNINSTALLED"
 # path = "/webhooks/app-uninstalled"
+# api_version = "2025-07"
+
+
