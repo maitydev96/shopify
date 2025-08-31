@@ -1,15 +1,12 @@
 import { defineConfig } from "vite";
 import { gadget } from "gadget-server/vite";
 import react from "@vitejs/plugin-react-swc";
+import path from "path";
 
 export default defineConfig({
   plugins: [
     gadget({
-      viteOptions: {
-        build: {
-          outDir: "dist", // force Vite output to 'dist'
-        },
-      },
+      outDir: path.resolve(__dirname, "dist"), // Force Gadget to output to 'dist'
     }),
     react(),
   ],
@@ -17,7 +14,8 @@ export default defineConfig({
     exclude: ["gadget-server"],
   },
   build: {
-    outDir: "dist", // ensure Vite also knows about 'dist'
+    outDir: "dist",        // Make Vite build to 'dist'
+    emptyOutDir: true,     // Clear old files
     target: "esnext",
     minify: "esbuild",
     rollupOptions: {
@@ -25,6 +23,7 @@ export default defineConfig({
     },
   },
 });
+
 
 
 
