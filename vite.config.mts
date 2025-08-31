@@ -6,7 +6,7 @@ import path from "path";
 export default defineConfig({
   plugins: [
     gadget({
-      outDir: path.resolve(__dirname, "dist"), // Force Gadget to output to 'dist'
+      outDir: path.resolve(__dirname, "dist"), // Gadget output folder
     }),
     react(),
   ],
@@ -14,7 +14,7 @@ export default defineConfig({
     exclude: ["gadget-server"],
   },
   build: {
-    outDir: "dist",        // Make Vite build to 'dist'
+    outDir: "dist",        // Vite output folder
     emptyOutDir: true,     // Clear old files
     target: "esnext",
     minify: "esbuild",
@@ -23,13 +23,3 @@ export default defineConfig({
     },
   },
 });
-
-
-
-
-
-
-
-
-
-
