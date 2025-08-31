@@ -1,0 +1,7 @@
+{
+  "version": 3,
+  "sources": ["../src/iife-export.ts"],
+  "sourcesContent": ["import { ShopifyappDw5dClient } from \".\";\n\ndeclare global {\n  interface Window {\n    /**\n     * The Gadget client constructor\n     *\n     * @example\n     * ```ts\n     * const api = new ShopifyappDw5dClient();\n     * ```\n     */\n    ShopifyappDw5dClient: typeof ShopifyappDw5dClient;\n\n    /**\n     * The Gadget client for ShopifyappDw5dClient\n     * @deprecated Use window.ShopifyappDw5dClient instead\n     */\n    Gadget: typeof ShopifyappDw5dClient;\n  }\n}\n\n// add the client to the window\nwindow.ShopifyappDw5dClient = ShopifyappDw5dClient;\n\nconst previousValue: any = window.Gadget;\n\n// add the client to the window at the old .Gadget property for backwards compatibility -- the ShopifyappDw5dClient property should be preferred instead\nwindow.Gadget = ShopifyappDw5dClient;\n(window.Gadget as any).previousValue = previousValue;\n"],
+  "mappings": ";AAAA,eAAqC;AAuBrC,OAAO,uBAAuB;AAE9B,MAAM,gBAAqB,OAAO;AAGlC,OAAO,SAAS;AACf,OAAO,OAAe,gBAAgB;",
+  "names": []
+}

@@ -9,7 +9,12 @@ export const settings: GadgetSettings = {
         apiVersion: "2025-07",
         enabledModels: ["shopifyTheme"],
         type: "partner",
-        scopes: ["write_script_tags", "write_themes"],
+        scopes: [
+          "write_script_tags",
+          "write_themes",
+          "read_script_tags",
+          "read_themes",
+        ],
         customerAuthenticationEnabled: false,
       },
     },

@@ -1,0 +1,9 @@
+{
+  "application": "shopifyapp-dw5d",
+  "environment": "development",
+  "environments": {
+    "development": {
+      "filesVersion": "12"
+    }
+  }
+}
